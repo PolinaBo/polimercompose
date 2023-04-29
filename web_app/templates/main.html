@@ -1,0 +1,74 @@
+<!doctype html>
+<style>
+form {
+    margin: auto;
+    width: 50%;
+}
+
+div {
+    margin: auto;
+    width: 50%;
+    border: 1px solid #8b0000"
+}
+</style>
+
+<head>
+    <title>Композитные материалы</title>
+</head>
+<form action="" method="post">
+    <fieldset>
+        <legend>Введите характеристики композита</legend>
+        <p>
+        <input type="number" name="1" required>
+		<label for="1">Плотность, кг/м3</label>
+        </p><p>
+        <input type="number" name="2" required>
+		<label for="2">Модуль упругости, ГПа</label>
+        </p><p>
+        <input type="number" name="3" required>
+		<label for="3">Количество отвердителя, м.%</label>
+        </p><p>
+        <input type="number" name="4" required>
+		<label for="4">Содержание эпоксидных групп,%_2</label>
+        </p><p>
+        <input type="number" name="5" required>
+		<label for="5">Температура вспышки, С_2</label>
+        </p><p>
+        <input type="number" name="6" required>
+		<label for="6">Поверхностная плотность, г/м2</label>
+        </p><p>
+        <input type="number" name="7" required>
+		<label for="7">Модуль упругости при растяжении, ГПа</label>
+        </p><p>
+        <input type="number" name="8" required>
+		<label for="8">Прочность при растяжении, МПа</label>
+        </p><p>
+        <input type="number" name="9" required>
+		<label for="9">Потребление смолы, г/м2</label>
+        </p><p>
+        <input type="number" name="10" required>
+		<label for="10">Угол нашивки, град</label>
+        </p><p>
+        <input type="number" name="11" required>
+		<label for="11">Шаг нашивки</label>
+        </p><p>
+        <input type="number" name="12" required>
+		<label for="12">Плотность нашивки</label>
+        </p>
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+
+<div class="result" align="center">
+    {% if result %}
+    <br>
+    <p style="font-size:26px">
+        Рекомендуемое соотношение матрица-наполнитель:
+    </p>
+    <p style="font-size: 26px">
+        {{result}}
+    </p>
+    {% endif %}
+</div>
